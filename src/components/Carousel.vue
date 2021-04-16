@@ -3,6 +3,7 @@
     <div class="carousel_container">
       <template>
         <v-carousel
+            :aspect-ratio="16/9"
             hide-delimiters
             cycle
             show-arrows-on-hover>
@@ -10,11 +11,9 @@
               v-for="(item,i) in items"
               :key="i"
               :src="item.src"
-              reverse-transition="fade-transition"
-              transition="fade-transition"
           >
+
             <v-row
-                v-bind:style="{backgroundColor:bgColor}"
                 @mouseover="hoverIn()"
                 @mouseout="hoverOut()"
                 class="fill-height"
@@ -61,11 +60,9 @@ export default {
   }),
   methods: {
     hoverIn() {
-      this.bgColor = 'rgba(255,255,255,0)'
 
     },
     hoverOut() {
-      this.bgColor = 'rgba(255,255,255,0.15)'
     }
   }
 }

@@ -9,24 +9,35 @@
     </v-app-bar>
 
     <v-content>
-      <Carousel/>
+      <div class="content">
+        <Carousel/>
+        <div class="gallery_container">
+        <Gallery/>
+        </div>
+      </div>
     </v-content>
 
     <v-main>
-
     </v-main>
+    <v-footer class="footer_container">
+      <Footer/>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
 import Header from './components/Header';
 import Carousel from './components/Carousel';
+import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
+
 
 export default {
   name: 'App',
 
   components: {
-    Header, Carousel
+    Gallery,
+    Header, Carousel,Footer
   },
 
 
