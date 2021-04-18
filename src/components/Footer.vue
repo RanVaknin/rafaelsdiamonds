@@ -15,9 +15,11 @@
               class="mx-4 "
               icon
           >
-            <v-icon size="24px">
-              {{ icon }}
-            </v-icon>
+            <a :href="icon.src" target="_blank">
+              <v-icon size="24px">
+                {{ icon.img }}
+              </v-icon>
+            </a>
           </v-btn>
         </v-card-text>
 
@@ -41,10 +43,22 @@ export default {
   data(){
     return{
       icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-linkedin',
-        'mdi-instagram',
+        {
+          img: 'mdi-facebook',
+          src: 'https://www.facebook.com/Rafaelsdiamonds/'
+        },
+        {
+          img: 'mdi-twitter',
+          src: ''
+        },
+        {
+          img: 'mdi-linkedin',
+          src: ''
+        },
+        {
+          img: 'mdi-instagram',
+          src: 'https://www.instagram.com/rafaelsdiam'
+        },
       ]
     }
   }

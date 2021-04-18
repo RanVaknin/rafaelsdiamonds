@@ -3,7 +3,6 @@
     <div class="carousel_container">
       <template>
         <v-carousel
-            :aspect-ratio="16/9"
             hide-delimiters
             cycle
             show-arrows-on-hover>

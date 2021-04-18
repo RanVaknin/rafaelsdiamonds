@@ -45,10 +45,7 @@
                     absolute
                     color="#000000C1"
                 >
-                  <v-btn
-                  outlined
-                  color="TEAL"
-                  >See more info</v-btn>
+                  <popup v-bind:gem="n"/>
                 </v-overlay>
               </v-fade-transition>
             </v-card>
@@ -59,29 +56,40 @@
   </v-container>
 </template>
 
+
 <script>
+import Popup from "./Popup";
+
 export default {
   name: 'Gallery',
-
+  components: {
+    Popup
+  },
   data: () => ({
     items: [
       {
-        src: require('../assets/glow_pear.jpg')
+        src: require('../assets/glow_pear.jpg'),
+        title: '999'
       },
       {
-        src: require('../assets/blue_hex.jpg')
+        src: require('../assets/blue_hex.jpg'),
+        title: '999'
       },
       {
-        src: require('../assets/freeform.jpg')
+        src: require('../assets/freeform.jpg'),
+        title: '999'
       },
       {
-        src: require('../assets/emerald.jpg')
+        src: require('../assets/emerald.jpg'),
+        title: '999'
       },
       {
-        src: require('../assets/montana_cushion.jpg')
+        src: require('../assets/montana_cushion.jpg'),
+        title: '999'
       },
       {
-        src: require('../assets/small_emerald.jpg')
+        src: require('../assets/small_emerald.jpg'),
+        title: '999'
       },
     ]
   })
