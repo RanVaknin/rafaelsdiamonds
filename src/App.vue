@@ -36,8 +36,7 @@ export default {
   name: 'App',
 
   components: {
-    Gallery,
-    Header, Carousel,Footer
+    Gallery, Header, Carousel,Footer
   },
 
 
