@@ -2,7 +2,7 @@
   <v-container class="carousel">
     <div class="carousel_container">
       <template>
-        <v-carousel
+        <v-carousel id="carousel_component"
             hide-delimiters
             cycle
             show-arrows-on-hover>
@@ -10,6 +10,7 @@
               v-for="(item,i) in items"
               :key="i"
               :src="item.src"
+
           >
 
             <v-row
